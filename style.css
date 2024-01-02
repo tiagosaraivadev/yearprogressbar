@@ -62,9 +62,36 @@ footer {
     background-color: rgb(0, 240, 0);
 }
 
-#porcentage {
+#percentage {
     color: white;
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
 }
 
+@media only screen and (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    #container {
+        width: 350px; 
+        max-width: none;
+    }
+
+    #myBar {
+        border-width: 5px;
+        width: 100%;
+    }
+
+    #myProgress {
+        height: 40px; 
+    }
+
+    #percentage {
+        font-size: 18px; 
+    }
+
+    #title {
+        font-size: 17px;
+    }
+}
