@@ -13,7 +13,7 @@ function updateTime() {
     progressElement.style.width = percentage.toFixed(7) + '%';
    }
    else {
-      percentageElement.innerText = (currentDate.getFullYear()) + " está 100% completo!!";
+      percentageElement.innerText = (currentDate.getFullYear() -1) + " está 100% completo!!";
       clearInterval(intervalIdpercentage);
    }
 }
