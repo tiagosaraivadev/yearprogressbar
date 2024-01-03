@@ -8,12 +8,12 @@ function updateTime() {
    const totalMsInYear = 31622400000;
    const percentage = (diffInMs / totalMsInYear) * 100;
 
-   if (percentage < 100 ) {
+   if (percentage <= 100 ) {
     percentageElement.innerText = currentDate.getFullYear() + " está " + percentage.toFixed(7) + '%' + " completo";
     progressElement.style.width = percentage.toFixed(7) + '%';
    }
    else {
-      percentageElement.innerText = (currentDate.getFullYear() -1) + " está 100% completo!!";
+      percentageElement.innerText = (currentDate.getFullYear()) + " está 100% completo!!";
       clearInterval(intervalIdpercentage);
    }
 }
