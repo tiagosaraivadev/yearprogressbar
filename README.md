@@ -1,6 +1,6 @@
 # Year Progress Bar
 
-![Year Progress Bar](images/model.png)
+![Year Progress Bar](images/tutorial.png)
 
 Uma ferramenta simples da barra de progresso do ano para visualizar a sua conclusão.
 
