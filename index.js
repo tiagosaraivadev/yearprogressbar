@@ -3,9 +3,18 @@ var progressElement = document.getElementById('myProgress');
 
 function updateTime() {
    var currentDate = new Date;
+   const day = currentDate.getDate();
+   const month = currentDate.getMonth();
+
+   if (day == 2 && month == 0) {
+      clearInterval(intervalIdpercentage); 
+      startPercentageUpdate();
+      return;
+   }
+
    const startDate = new Date(currentDate.getFullYear(), 0, 1);
    var diffInMs = currentDate - startDate;
-   const totalMsInYear = 31622400000;
+   const totalMsInYear = calculateTotalMsInYear(currentDate.getFullYear());
    const percentage = (diffInMs / totalMsInYear) * 100;
 
    if (percentage < 100 ) {
@@ -18,4 +27,17 @@ function updateTime() {
    }
 }
 
-var intervalIdpercentage = setInterval(updateTime, 300);
+function calculateTotalMsInYear(year) {
+   const firstDay = new Date(year, 0, 1);
+   const lastDay = new Date(year, 11, 31, 23, 59, 59, 999);
+
+   const timeDifferenceInMilliseconds = lastDay.getTime() - firstDay.getTime();
+
+   return timeDifferenceInMilliseconds + 1;
+}
+
+function startPercentageUpdate() {
+   intervalIdpercentage = setInterval(updateTime, 300);
+}
+
+startPercentageUpdate();
