@@ -17,7 +17,7 @@ function updateTime() {
    const totalMsInYear = calculateTotalMsInYear(currentDate.getFullYear());
    const percentage = (diffInMs / totalMsInYear) * 100;
 
-   if (percentage < 100 ) {
+   if (percentage <= 100 ) {
     percentageElement.innerText = currentDate.getFullYear() + " está " + percentage.toFixed(7) + '%' + " completo";
     progressElement.style.width = percentage.toFixed(7) + '%';
    }
