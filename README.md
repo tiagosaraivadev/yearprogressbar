@@ -35,5 +35,5 @@ Este projeto está licenciado sob a [Licença MIT](LICENSE).
 
 ## Contato
 
-Se você tiver alguma dúvida ou sugestão, sinta-se à vontade para entrar em contato através do tiago.saraiva@hotmail.com
+Se você tiver alguma dúvida ou sugestão, sinta-se à vontade para entrar em contato.
 
