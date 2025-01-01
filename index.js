@@ -41,3 +41,5 @@ function startPercentageUpdate() {
 }
 
 startPercentageUpdate();
+
+document.getElementById('footerYear').textContent = new Date().getFullYear();
