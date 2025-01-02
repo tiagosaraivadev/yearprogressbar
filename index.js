@@ -3,20 +3,12 @@ var progressElement = document.getElementById('myProgress');
 
 function updateTime() {
    var currentDate = new Date;
-   const day = currentDate.getDate();
-   const month = currentDate.getMonth();
-
-   if (day == 2 && month == 0) {
-      clearInterval(intervalIdpercentage); 
-      startPercentageUpdate();
-      return;
-   }
 
    const startDate = new Date(currentDate.getFullYear(), 0, 1);
    var diffInMs = currentDate - startDate;
    const totalMsInYear = calculateTotalMsInYear(currentDate.getFullYear());
    const percentage = (diffInMs / totalMsInYear) * 100;
-
+   
    if (percentage <= 100 ) {
     percentageElement.innerText = currentDate.getFullYear() + " está " + percentage.toFixed(7) + '%' + " completo";
     progressElement.style.width = percentage.toFixed(7) + '%';
