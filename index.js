@@ -1,5 +1,6 @@
 var percentageElement = document.getElementById('percentage');
 var progressElement = document.getElementById('myProgress');
+const currentYear = new Date().getFullYear();
 
 function updateTime() {
    var currentDate = new Date;
@@ -34,4 +35,6 @@ function startPercentageUpdate() {
 
 startPercentageUpdate();
 
-document.getElementById('footerYear').textContent = new Date().getFullYear();
+const collection = document.getElementsByClassName("currentYear");
+collection[0].innerText = currentYear;
+collection[1].innerText = currentYear;
